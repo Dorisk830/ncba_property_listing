@@ -23,17 +23,17 @@ export default function Header() {
     }
   }, [location.search]);
   return (
-    <header className='bg-slate-200 shadow-md'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+    <header className='bg-white shadow-md'>
+      <div className='flex justify-between items-center max-w-8xl mx-auto p-3 '>
         <Link to='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Real</span>
-            <span className='text-slate-700'>Estate</span>
+          <h1 className='font-bold text-xl sm:text-xl flex flex-wrap hover:font-italic'>
+            <span className='text-cyan-800 text-3xl '>Real</span>
+            <span className='text-cyan-950 text-2xl'>Estate</span>
           </h1>
         </Link>
         <form
           onSubmit={handleSubmit}
-          className='bg-slate-100 p-3 rounded-lg flex items-center'
+          className='bg-cyan-100 p-3 rounded-lg flex items-center text-cyan-950 font-bold'
         >
           <input
             type='text'
@@ -43,17 +43,17 @@ export default function Header() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button>
-            <FaSearch className='text-slate-600' />
+            <FaSearch className='text-cyan-600 font-semibold'/>
           </button>
         </form>
-        <ul className='flex gap-4'>
+        <ul className='flex gap-10'>
           <Link to='/'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline text-cyan-950 font-bold text-xl hover:text-cyan-500'>
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline text-cyan-950 font-bold text-xl hover:text-cyan-500'>
               About
             </li>
           </Link>
@@ -65,7 +65,7 @@ export default function Header() {
                 alt='profile'
               />
             ) : (
-              <li className=' text-slate-700 hover:underline'> Sign in</li>
+              <li className=' text-cyan-900 hover:text-cyan-500'> Sign in</li>
             )}
           </Link>
         </ul>
